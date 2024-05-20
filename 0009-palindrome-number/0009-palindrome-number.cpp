@@ -1,13 +1,20 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-       
-        if(x  <  0)return false;
-        string s = to_string(x);
-        for(int i=0;i<s.length()/2;i++){
-            if(s[i] != s[s.length() -1 - i])return false;
+      if(x<0){
+      return false;
+      }
+        long long ans=0;
+        long long num=x;
+        while(num!=0){
+            int digit=num%10;
+            ans=ans*10+digit;
+            num=num/10;
         }
-        return true;
-
+        return (ans==x);
     }
+    
+        
+       
+    
 };
