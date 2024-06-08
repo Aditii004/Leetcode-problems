@@ -4,7 +4,7 @@ public:
         int n=matrix.size();
         int m=matrix[0].size();
         for(int i=0;i<n;i++){
-            for(int j=i+1;j<m;j++){
+            for(int j=i+1;j<n;j++){
                 swap(matrix[i][j],matrix[j][i]);
             }
         }
@@ -16,7 +16,8 @@ public:
                 s++;
                 e--;
             }
+            
         }
-        
     }
+        
 };
